@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link
+	href="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.css"
+	rel="stylesheet" />
+<link href="app/resources/style.css" rel="stylesheet" />
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<script type="text/javascript"
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+<script type="text/javascript"
+	src="http://code.angularjs.org/1.2.6/angular-resource.min.js"></script>
+<script type="text/javascript"
+	src="http://code.angularjs.org/1.2.6/angular-animate.min.js"></script>
+<script src="http://code.angularjs.org/1.2.0/angular-animate.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.js"></script>
+<!-- Main HTML frame of the SPA, containing other views -->
+<!-- Load app main script -->
+<script type="text/javascript" src="app/app.js"></script>
+<!-- Load controllers, services etc-->
+<script type="text/javascript" src="app/controllers/taskController.js"></script>
+<script type="text/javascript" src="app/services/taskService.js"></script>
+<script type="text/javascript" src="app/filters/taskFilter.js"></script>
+<script type="text/javascript" src="scripts/utils.js"></script>
+
+<title>MySimpleTaskList</title>
+</head>
+<body data-ng-app="TasklistApp">
+	<div id="page">
+
+		<section class="container" id="body">
+			<div data-ng-view=""></div>
+		</section>
+
+		<hr />
+
+
+	</div>
+	<a
+		href="http://opensource.org/licenses/MIT"><span
+		class="glyphicon glyphicon-copyright-mark" aria-hidden="true"
+		data-toggle="tooltip" data-placement="right"
+		title="The MIT License (MIT)
+Copyright (c) 2014"></span></a>
+</body>
+</html>

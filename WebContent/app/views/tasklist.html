@@ -1,0 +1,63 @@
+<!-- fragment for rendering the tasklist and all its components, included in index.html -->
+
+<div>
+	<div class="roundborder">
+		<div class="little-padding">
+			<h2>
+				MyTasks
+				<button data-ng-click="showAll()"
+					class="btn btn-default floatOnLineRight">Show All</button>
+				<input type="text" data-ng-model="filterValue"
+					class="form-control filterInput floatOnLineRight"
+					placeholder="Filter Tasks by List" />
+			</h2>
+			<br>
+			<br>
+			<div>
+
+
+				<div id="myTasks">
+					<table class="table table-striped table-hover ">
+						<thead>
+							<tr>
+								<th><h4><span class="glyphicon glyphicon-pushpin " aria-hidden="true"></span></h4></th>
+								<th><span class="glyphicon glyphicon-list-alt " aria-hidden="true"></span></th>
+								<th><h4><span class="glyphicon glyphicon-ok " aria-hidden="true"></span></h4></th>
+								<th></th>
+							</tr>
+							<tr data-ng-repeat="task in filteredTasks"
+								data-ng-class="{strike: deleted}">
+								<td data-ng-class="{strike: deleted}"><p
+										data-ng-class="{strike: checked}">{{ task.name }}</span></p></td>
+								<td><p data-ng-class="{strike: checked}">    {{task.list}}</span></p></td>
+								<td><input class="checkbox  pointer" type="checkbox"
+									data-ng-click="toggleDoneProperty(task.id)"
+									data-ng-model="checked" data-ng-init="checked=task.done" /></td>
+								<td><span data-ng-click="deleteTask(task.id)"
+									class="glyphicon glyphicon-trash pointer" aria-hidden="true"></span></td>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+			</div>
+		</div>
+		</br> </br>
+		<div class="roundborder-inner">
+
+			<form data-ng-controller="taskController"
+				data-ng-submit="createTask()">
+				<div class="newTaskInput">
+					<input type="text" data-ng-model="newTask.name"
+						class="form-control floatOnLineLeft" id="newTaskName"
+						placeholder='Enter New Task Here...'> <input type="text"
+						data-ng-model="newTask.list" class="form-control floatOnLineLeft"
+						id="newTaskList" placeholder='Which List does it belong to?'>
+					<button type="submit" class="btn btn-default">Create</button>
+				</div>
+
+
+			</form>
+		</div>
+	</div>
+</div>

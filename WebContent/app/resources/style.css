@@ -1,0 +1,64 @@
+@CHARSET "ISO-8859-1";
+
+.strike {
+	text-decoration: line-through;
+	color: #101010;
+}
+
+.roundborder {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-color: #464545;
+	border-style: solid;
+	border-width: 2px;
+	margin:5px;
+	
+}
+
+.little-padding {
+	padding: 5px;
+}
+
+.roundborder-inner {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-color: #464545;
+	border-style: solid;
+	border-width: 2px;
+	margin:0px;
+	padding:5px;
+}
+
+input[type="text"] {
+	width: 300px;
+}
+
+.floatOnLineLeft{
+	
+	float:left;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+table tr{
+	border-bottom: 2px solid #464545;
+}
+
+
+.floatOnLineRight{
+	float:right;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.filterInput {
+	width: 300px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+table td {
+	color: #999999;
+}
